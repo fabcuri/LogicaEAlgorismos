@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Dados</title>
+
+    <script>
+        /*conversão de dados
+texto pra inteiro parseInt()
+texto para real parseFloat()
+int para texto toString()
+*/
+
+        let nota1 = parseFloat(prompt("Informe a primeira nota"));
+        let nota2 = parseFloat(prompt("Informe a segunda nota"));
+        let media = (nota1 + nota2)/2;
+// operador ternario
+        document.write(media>=7? "Aprovado": media>=5? "Em exame" : "Reprovado");
+        //document.write(media>=7? `Aprovado com media ${media}`:`Reprovado com media ${media}`);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
