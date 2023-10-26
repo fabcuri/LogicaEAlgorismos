@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor com Laço</title>
+    <script>
+        //vetor
+        let nomes = ['Aline','Bruno','Carlos','Diana','Elaine'];
+
+        for(let i=0;i<nomes.length;i++){
+            document.write(nomes[i]+'<br>');
+        }
+        let obterNome = prompt("Informe um nome");
+        let existe = false;
+        for(let i=0;i<nomes.length;i++){
+            if (obterNome == nomes[i]){
+             existe = true;
+            }
+        }
+        if(existe){
+            alert("O nome existe no vetor");
+        }else{
+            alert("O nome não existe no vetor");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

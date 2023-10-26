@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <script>
+        let produtos = [];
+        let menu = "1 Cadastrar produto\n";
+            menu+= "2 Listar Produtos\n";
+            menu+= "3 Remover produto\n";
+            menu+= "4 Finalizar";
+        let opcao = 0;
+        do{
+            opcao = parseInt(prompt(menu));
+            switch(opcao){
+                case 1:
+                    produtos.push(prompt("Informe o produto que deseja cadastrar"));
+                    alert("Produto cadastrado com sucesso");
+                break;
+                case 2:
+                    let lista = "**************Produtos Cadastrados ****** \n\n";
+
+                    for (let index = 0; index < produtos.length; index++) {
+                        lista+=  produtos[index] + "\n";
+                        
+                    }
+                    alert(lista);
+                break;
+                case 3:
+                    let indiceRemocao = -1;
+                    let nomeProdutoRemocao = prompt("Informe o nome do produto que deseja remover");
+                    for (let index = 0; index < produtos.length; index++) {
+                        if(nomeProdutoRemocao === produtos[index]){
+                            indiceRemocao = index;
+                        }
+                    }
+                    if(indiceRemocao != -1){
+                        produtos.splice (indiceRemocao,1);
+                        alert("Produto removido com sucesso!")
+                    }else{
+                        alert("Produto não encontrado");
+                    }
+    
+                   
+                break;
+                case 4:
+                    alert("Finalizar");
+                break;
+                default:
+                    alert("Opção Invalida");
+            }
+        }while(opcao != 4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
